@@ -1,0 +1,33 @@
+﻿<Window x:Class="farmersMarket.Sales"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:farmersMarket"
+        mc:Ignorable="d"
+        Title="Sales" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/abstract-soft-pink-background-modern-and-clean-banner-landing-page-concept-with-pastel-color-free-vector (1).jpg"/>
+        </Grid.Background>
+        <Label x:Name="orderpage" Content="Sales Page" HorizontalAlignment="Left" Margin="262,26,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="BroadwayEngraved BT" Foreground="#FFFF174C"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="168,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" RenderTransformOrigin="1.869,0.696"/>
+        <Label x:Name="label1" Content="Product Name" HorizontalAlignment="Left" Margin="38,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.471,-0.626" FontSize="16" Foreground="#FFE817FF" FontWeight="Bold"/>
+        <TextBox x:Name="amountTextBox" HorizontalAlignment="Left" Margin="168,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" RenderTransformOrigin="1.869,0.696"/>
+        <Label x:Name="label2" Content="Amount(KG)" HorizontalAlignment="Left" Margin="38,176,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.471,-0.626" FontSize="16" FontWeight="Bold" Foreground="#FFE817FF"/>
+        <TextBox x:Name="salesTextBox" HorizontalAlignment="Left" Margin="171,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" RenderTransformOrigin="1.869,0.696"/>
+        <Label x:Name="label3" Content="Total Amount" HorizontalAlignment="Left" Margin="37,311,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.471,-0.626" FontSize="16" FontWeight="Bold" Foreground="#FFE817FF"/>
+        <Button x:Name="showme" Content="Show Me Amount" HorizontalAlignment="Left" Margin="48,252,0,0" VerticalAlignment="Top" Background="#FFF150EB" Foreground="#FFF9F6F6" FontFamily="Haan Somang B" BorderThickness="3,3,3,3" BorderBrush="#FFA230F5" Click="showme_Click"/>
+        <Button x:Name="clear" Content="Clear" HorizontalAlignment="Left" Margin="213,252,0,0" VerticalAlignment="Top" Background="#FFF150EB" Foreground="#FFF9F6F6" FontFamily="Haan Somang B" BorderBrush="#FFA230F5" BorderThickness="3,3,3,3" Click="clear_Click"/>
+        <Button x:Name="proceed" Content="Please Proceed" HorizontalAlignment="Left" Margin="90,376,0,0" VerticalAlignment="Top" Background="#FFF150EB" Foreground="#FFF9F6F6" FontFamily="Haan Somang B" BorderThickness="3,3,3,3" BorderBrush="#FFA230F5"/>
+        <DataGrid x:Name="ProductList" Margin="320,110,10,150" AutoGenerateColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}" Width="110"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding ProductID}" Width="110"/>
+                <DataGridTextColumn Header="Amount (KG)" Binding="{Binding AmountKG}" Width="110"/>
+                <DataGridTextColumn Header="Price Per KG" Binding="{Binding PricePerKG}" Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+</Window>

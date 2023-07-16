@@ -127,6 +127,7 @@ namespace farmersMarket
             }
         }
 
+
         private void LoadProducts()
         {
             string connectionString = "server=localhost;database=farmersMarket;user=root;password=root12345!";

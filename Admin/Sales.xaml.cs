@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 
-
 namespace farmersMarket 
 {
     public partial class Sales : Window
